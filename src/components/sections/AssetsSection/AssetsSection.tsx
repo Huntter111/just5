@@ -16,8 +16,8 @@ const AssetsSection = ({ anchorId }: AssetsSectionProps) => {
 					</h2>
 					<p className="assets__description">High-quality, game-ready resources built to speed up your development.</p>
 				</div>
-				<AssetsSlider />
 			</div>
+			<AssetsSlider />
 		</section>
 	)
 }

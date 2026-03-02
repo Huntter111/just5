@@ -9,7 +9,10 @@
 	@media (min-width: $mobile) {
 		padding-bottom: toRem(100);
 	}
-
+	&__slider {
+		min-width: 0;
+		// overflow: hidden;
+	}
 	&__container {
 	}
 	&__heading {
