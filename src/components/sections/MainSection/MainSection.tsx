@@ -9,7 +9,7 @@ const MainSection = () => {
 					<div className="main-block__text-action">
 						<div className="main-block__heading">
 							<h1 className="main-block__title">
-								High Quality <span>Game Assets</span> for Fast Development
+								High Quality <span>Game Assets</span> for&nbsp;Fast Development
 							</h1>
 							<h2 className="main-block__sub-title">Premium 2D assets, UI kits and game-ready packs for indie developers.</h2>
 						</div>

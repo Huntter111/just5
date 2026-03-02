@@ -54,6 +54,7 @@
 		}
 	}
 	&::after {
+		transform: translateZ(0);
 		position: absolute;
 		content: '';
 		bottom: toRem(-20);
@@ -95,6 +96,7 @@
 	position: relative;
 	&::before,
 	&::after {
+		transform: translateZ(0);
 		content: '';
 		position: absolute;
 		top: 0%;
@@ -113,6 +115,7 @@
 }
 
 .image {
+	transform: translateZ(0);
 	max-width: 305px;
 	&:nth-child(1) {
 		transform: translate(13%, -20%);
