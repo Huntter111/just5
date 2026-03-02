@@ -1,0 +1,287 @@
+@use '../../../styles//base/variables' as *;
+@use '../../../styles/base/functions.scss' as *;
+@use '../../../styles/base/mixins.scss' as *;
+
+.mainSliderWrapper {
+	min-width: 0; // для коректної роботи slider
+}
+.mainSwiper {
+	position: relative;
+	// overflow: hidden;
+
+	mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+	-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+@keyframes levitateReverse {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(15px);
+	}
+}
+@keyframes levitate {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+}
+
+.slide {
+	// background: #000;
+	position: relative;
+
+	padding-top: toRem(40) !important;
+	padding-bottom: toRem(80) !important;
+
+	@media (max-width: $tablet) {
+		padding-bottom: toRem(60) !important;
+	}
+	@media (max-width: $mobile) {
+		padding-bottom: toRem(40) !important;
+	}
+	@media (max-width: $mobileSmall) {
+		padding-top: toRem(20) !important;
+		padding-bottom: toRem(30) !important;
+	}
+	img {
+		@media (max-width: $mobileSmall) {
+			max-height: toRem(280);
+		}
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: toRem(-20);
+		left: 0;
+		right: 0;
+
+		width: 100%;
+		max-height: 189px;
+		height: 100%;
+		background: url('../../../assets/images/main-slider/icons/bg-ellipse.svg') center / contain no-repeat;
+	}
+	@media (max-width: $mobileSmall) {
+		&::after {
+			width: toRem(250);
+			left: calc(50% - 125px);
+			bottom: -65px;
+		}
+	}
+}
+
+.wrapper {
+	padding-right: toRem(30) !important;
+	padding-left: toRem(15) !important;
+	position: relative;
+}
+/* ==================== slideOne ==================== */
+.slideOne {
+	padding-top: 105px !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	@media (max-width: $mobile) {
+		padding-top: 70px !important;
+	}
+	// transform: translateY(100px) !important;
+}
+.images {
+	display: flex;
+	position: relative;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0%;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	&::before {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-one-under.svg') center / contain no-repeat;
+		z-index: -1;
+	}
+	&::after {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-one-upper.svg') center / contain no-repeat;
+		z-index: 1;
+	}
+}
+
+.image {
+	max-width: 305px;
+	&:nth-child(1) {
+		transform: translate(13%, -20%);
+		img {
+			animation: levitate 3.5s ease-in-out infinite;
+		}
+	}
+	&:nth-child(2) {
+		transform: translateX(10%);
+		img {
+			animation: levitateReverse 3.5s ease-in-out infinite;
+		}
+	}
+	img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+
+/* ==================== slideTwo ==================== */
+.slideTwo {
+	position: relative;
+}
+.imageTwo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0%;
+		left: -3%;
+
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	&::before {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-two-under.svg') center / contain no-repeat;
+		z-index: -1;
+	}
+	&::after {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-two-upper.svg') center / contain no-repeat;
+		z-index: 1;
+	}
+	img {
+		@media (min-width: $mobileSmall) {
+			max-height: toRem(424);
+		}
+		max-width: 100%;
+		animation: levitate 3.5s ease-in-out infinite;
+	}
+}
+/* ==================== slideThree ==================== */
+.slideThree {
+	position: relative;
+}
+.imageThree {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	// padding: 20px 0;
+	img {
+		max-width: 100%;
+		animation: levitate 3.5s ease-in-out infinite;
+	}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: -5%;
+		left: 10%;
+		width: 100%;
+		height: 110%;
+		@media (max-width: $tablet) {
+			left: 8%;
+		}
+		@media (max-width: $mobile) {
+			left: 10%;
+		}
+		pointer-events: none;
+	}
+	&::before {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-three-under.svg') center / contain no-repeat;
+		z-index: -1;
+	}
+	&::after {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-three-upper.svg') center / contain no-repeat;
+		z-index: 1;
+	}
+}
+.slideFour {
+	position: relative;
+}
+// ! Image Four
+.imageFour {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// padding: 20px 0;
+	position: relative;
+
+	img {
+		max-width: 100%;
+		// max-width: toRem(402);
+		animation: levitate 3.5s ease-in-out infinite;
+	}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0%;
+		// left: 0%;
+		// for source image from figma without resize
+		// width: 80%;
+		// height: 80%;
+		width: 100%;
+		height: 90%;
+		pointer-events: none;
+	}
+	&::before {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-four-under.svg') center / contain no-repeat;
+		z-index: -1;
+	}
+	&::after {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-four-upper.svg') center / contain no-repeat;
+		z-index: 1;
+	}
+}
+// ! ImageFive
+.slideFive {
+	position: relative;
+}
+.imageFive {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// padding: 20px 0;
+	position: relative;
+	// height: toRem(497);
+	img {
+		max-width: 100%;
+		animation: levitate 3.5s ease-in-out infinite;
+	}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	&::before {
+		left: 4.5px;
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-five-under.svg') center / contain no-repeat;
+		z-index: -1;
+	}
+	&::after {
+		background: url('../../../assets/images/main-slider/icons/bg-line-slider-five-upper.svg') center / contain no-repeat;
+		z-index: 1;
+	}
+	@media (max-width: $mobileSmall) {
+		&::before {
+			left: 3px;
+		}
+	}
+}

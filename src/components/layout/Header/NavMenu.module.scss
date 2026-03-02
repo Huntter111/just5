@@ -1,0 +1,54 @@
+@use '../../../styles/base/variables' as *;
+
+.menu {
+	@media (min-width: $mobile) {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+	}
+}
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 54px;
+	// margin-right: auto;
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+	}
+}
+.item {
+}
+.link {
+	position: relative;
+	font-size: 1.125rem;
+	font-weight: 500;
+	// border-bottom: 1px solid transparent;
+	transition: all 0.3s;
+	line-height: 2;
+	white-space: nowrap;
+	&::after {
+		content: '';
+		position: absolute;
+		height: 0.0625rem;
+		background-color: #fff;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				left: 0;
+				width: 100%;
+			}
+			// border-bottom: 1px solid #ffffff;
+		}
+	}
+	@media (max-width: $mobile) {
+		font-size: 1.5rem;
+		color: #fff;
+	}
+}

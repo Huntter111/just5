@@ -1,0 +1,40 @@
+@use '../../../styles/base/functions' as *;
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: toRem(12);
+	flex-shrink: 0;
+	font-size: toRem(18);
+	padding: toRem(8) toRem(32);
+	border-radius: toRem(4);
+	line-height: 2;
+	min-width: toRem(160);
+	cursor: pointer;
+	transition: 0.3s ease;
+	font-weight: 700;
+}
+
+.primary {
+	color: #080e10;
+	background-color: #c4ff00;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #9ece00;
+		}
+	}
+}
+
+.outline {
+	text-transform: capitalize;
+	background: transparent;
+	color: #ffffff;
+	border: toRem(1) solid #ffffff;
+	@media (any-hover: hover) {
+		&:hover {
+			color: rgba(255, 255, 255, 0.7);
+			border: toRem(1) solid rgba(255, 255, 255, 0.7);
+		}
+	}
+}

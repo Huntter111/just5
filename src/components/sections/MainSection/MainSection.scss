@@ -1,0 +1,70 @@
+@use '../../../styles/base/functions' as *;
+@use '../../../styles/base/mixins' as *;
+@use '../../../styles/base/variables' as *;
+
+.main-block {
+	padding-top: toRem(80);
+	margin-bottom: toRem(40);
+	@media (max-width: $tablet) {
+		padding-top: toRem(40);
+	}
+	@media (max-width: $mobileSmall) {
+		padding-top: toRem(20);
+		margin-bottom: toRem(20);
+	}
+	&__container {
+	}
+	&__body {
+		@media (min-width: $tablet) {
+			display: flex;
+			gap: toRem(32);
+			align-items: center;
+			max-height: toRem(507);
+			// flex-direction: column;
+		}
+	}
+	&__text-action {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(40);
+		flex: 0 0 49.231%;
+		@media (max-width: $tablet) {
+			@include adaptiveValue('margin-bottom', 80, 40);
+		}
+	}
+	&__slider {
+		min-width: 0;
+		flex: 0 0 52.231%;
+	}
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+	}
+	&__title {
+		@include adaptiveValue('font-size', 64, 40);
+		line-height: 1.35;
+		font-family: 'Gardion';
+		span {
+			color: #c4ff00;
+		}
+	}
+	&__sub-title {
+		@include adaptiveValue('font-size', 20, 18);
+		font-weight: 500;
+		line-height: 1.35;
+	}
+	&__buttons {
+		margin-top: 0.5rem;
+		font-size: 18px;
+		display: flex;
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+	&__images {
+		flex: 0 1 50%;
+	}
+}

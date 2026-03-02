@@ -1,0 +1,271 @@
+@use '../../../styles/base/mixins' as *;
+@use '../../../styles/base/functions' as *;
+@use '../../../styles/base/variables' as *;
+$slider-ease: cubic-bezier(0.23, 1, 0.32, 1);
+$slider-speed: 0.8s; // Має дорівнювати speed={800} у Swiper
+
+.assets-slider-wrapper {
+	position: relative;
+	// max-width: 1440px;
+	// margin: 0 auto;
+	.assets-swiper {
+		padding-top: toRem(80);
+		// padding-bottom: toRem(100);
+
+		@media (max-width: $mobile) {
+			padding-top: toRem(60);
+		}
+	}
+	.swiper-pagination {
+		width: max-content !important;
+		& > .swiper-pagination-bullet {
+			width: toRem(8);
+			height: toRem(8);
+			&.swiper-pagination-bullet-active {
+				background-color: #c4ff00 !important;
+			}
+		}
+	}
+	.swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-horizontal.swiper-pagination-bullets {
+		display: none;
+		@media (min-width: $mobile) {
+			display: flex;
+		}
+		bottom: -80px;
+		gap: toRem(8);
+		background-color: #262626;
+	}
+	.swiper-pagination-bullet {
+		margin: 0 !important;
+		background-color: #080e10;
+		opacity: 1 !important;
+	}
+}
+.assets-swiper {
+	overflow: visible !important;
+	.swiper-wrapper {
+		height: 407px;
+		@media (min-width: $mobile) {
+			height: 440px;
+		}
+	}
+	.swiper-slide {
+		width: toRem(419); // фіксована ширина слайда
+		transition:
+			transform $slider-speed $slider-ease,
+			opacity $slider-speed ease;
+		@media (max-width: $mobile) {
+			width: toRem(314);
+		}
+	}
+}
+/* ==================== КАРТОЧКА ==================== */
+
+.card {
+	position: relative;
+	width: 100%;
+	background: #262626;
+	border-radius: 24px;
+	padding: 20px;
+	transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+
+	transition:
+		transform $slider-speed $slider-ease,
+		padding $slider-speed $slider-ease,
+		grid-template-rows $slider-speed $slider-ease;
+
+	.swiper-slide-active & {
+		padding: 20px 28px 28px 28px;
+		transform: translateY(-60px);
+	}
+	&__decors {
+		height: toRem(9);
+		display: flex;
+	}
+	&__media {
+		position: relative;
+		transition: height 0.45s ease;
+		overflow: hidden;
+		border-radius: 20px;
+		margin-bottom: 32px;
+	}
+	&__image {
+		max-width: 379px;
+		height: 170px;
+		@media (max-width: $mobile) {
+			width: toRem(269);
+			height: toRem(150);
+		}
+		transition:
+			height $slider-speed $slider-ease,
+			width $slider-speed $slider-ease;
+		.swiper-slide-active & {
+			width: 363px;
+			height: 218px;
+			@media (max-width: $mobile) {
+				width: toRem(258);
+				height: toRem(172);
+			}
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 20px;
+		}
+	}
+
+	&__content {
+	}
+	&__title {
+		font-family: 'Gardion';
+		text-align: center;
+		line-height: 1.35;
+		overflow: hidden;
+	}
+	&__button-wrapper {
+		max-height: 0;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		transition:
+			max-height 0.7s ease,
+			padding-top 0.2s ease-in,
+			opacity 0.25s ease,
+			visibility 0.25s ease;
+		.swiper-slide-active & {
+			padding-top: 28px;
+			max-height: 80px;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__button {
+		width: 100%;
+	}
+	&__label {
+		font-family: 'IBM Plex Sans', sans-serif;
+		position: absolute;
+		z-index: 10;
+		top: toRem(7);
+		right: toRem(10);
+		font-size: toRem(28);
+		font-weight: 700;
+		color: #262626;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: toRem(11) toRem(20) toRem(13) toRem(20);
+		width: toRem(228);
+		height: toRem(60);
+		background-color: #bff700;
+		clip-path: path(
+			'M207.333 60H34.2191C27.7361 60 21.6554 56.8577 17.9052 51.5696L3.72137 31.5696C-5.67117 18.3256 3.79876 0 20.0353 0H207.333C218.378 0 227.333 8.9543 227.333 20V40C227.333 51.0457 218.378 60 207.333 60Z'
+		);
+		@media (max-width: $mobile) {
+			right: toRem(-4);
+			font-size: toRem(24);
+			width: toRem(184);
+			height: toRem(45);
+
+			padding: toRem(6) toRem(20) toRem(7) toRem(10);
+			clip-path: path(
+				'M153.419 44.9648H25.2222C20.0359 44.9648 15.1713 42.451 12.1711 38.2206L2.977 25.2564C-4.53703 14.6611 3.03894 0.000644684 16.0282 0.000644684H153.419C162.256 0.000644684 169.419 7.16408 169.419 16.0006V28.9648C169.419 37.8014 162.256 44.9648 153.419 44.9648Z'
+			);
+		}
+	}
+
+	&__buttons {
+	}
+}
+/* Кастомні кнопки */
+.swiper-custom-nav {
+	display: none;
+	@media (min-width: $mobile) {
+		display: flex;
+		gap: toRem(20);
+		position: absolute;
+		bottom: -100px;
+		right: 0;
+		width: toRem(132);
+		// height: toRem(56);
+		z-index: 20;
+	}
+}
+.swiper-button-prev,
+.swiper-button-next {
+	right: 0 !important;
+}
+.assets-swiper-button-prev {
+	// left: 0 !important;
+	// top: 0 !important;
+}
+.assets-swiper-button-next {
+}
+.assets-swiper-button-prev,
+.assets-swiper-button-next {
+	left: 0 !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	position: relative !important;
+	width: toRem(56) !important;
+	height: toRem(56) !important;
+	padding: toRem(16);
+	border: 1px solid #c4ff00;
+	border-radius: toRem(4);
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	path {
+		transition: all 0.3s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			border: 1px solid #9ece00;
+			path {
+				fill: #9ece00;
+			}
+		}
+	}
+	&:active {
+		transform: scale(0.97);
+	}
+	&.disabled {
+		cursor: not-allowed;
+		pointer-events: none;
+		opacity: 0.4;
+		border: 1px solid #769901;
+		path {
+			fill: #769901;
+		}
+	}
+}
+
+// ! Shape ==============
+.custom-shape {
+	width: toRem(411);
+	height: toRem(74);
+	position: absolute;
+	top: toRem(5);
+	left: toRem(8);
+	z-index: 5;
+	background: #262626;
+
+	clip-path: path(
+		'M390.826 74H200.762C194.504 74 188.607 71.0708 184.826 66.0844L171.049 47.9156C167.268 42.9292 161.37 40 155.112 40H20.0158C11.5169 40 3.94623 34.6287 1.13862 26.607C-3.4126 13.6035 6.2388 0 20.0158 0H390.826C401.872 0 410.826 8.95431 410.826 20V54C410.826 65.0457 401.872 74 390.826 74Z'
+	);
+	@media (max-width: $mobile) {
+		width: toRem(314);
+		height: toRem(55.5);
+		left: toRem(5);
+		clip-path: path(
+			'M291.875 55.3262H150.955C145.949 55.3262 141.231 52.9829 138.206 48.9937L128.489 36.1789C125.464 32.1898 120.746 29.8465 115.74 29.8465H15.0004C8.63131 29.8465 2.95781 25.8212 0.853784 19.8097C-2.55692 10.0648 4.67589 -0.129677 15.0004 -0.129677H291.875C300.712 -0.129677 307.875 7.03378 307.875 15.8703V39.3262C307.875 48.1627 300.712 55.3262 291.875 55.3262Z'
+		);
+	}
+}

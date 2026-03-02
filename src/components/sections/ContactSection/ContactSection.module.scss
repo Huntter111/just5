@@ -1,0 +1,194 @@
+@use '../../../styles/base/mixins' as *;
+@use '../../../styles/base/functions' as *;
+@use '../../../styles/base/variables' as *;
+
+@keyframes levitateReverse {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(15px);
+	}
+}
+@keyframes levitate {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+}
+
+.contact {
+	// position: relative;
+	@include adaptiveValue('padding-top', 120, 40);
+
+	@include adaptiveValue('margin-bottom', 170, 70);
+}
+.container {
+	position: relative;
+	@media (min-width: $mobile) {
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0%;
+			left: 0;
+			width: 100%;
+			height: toRem(600);
+			pointer-events: none;
+		}
+		&::before {
+			background: url('../../../assets/icons/contact/line-long.svg') 0 0 / 100% 100% no-repeat;
+			z-index: 2;
+		}
+	}
+	&::after {
+		background: url('../../../assets/icons/contact/line-short.svg') 0 0 / 100% 100% no-repeat;
+		pointer-events: none;
+		z-index: 10;
+	}
+	@media (min-width: $tablet) {
+		&::before,
+		&::after {
+			top: -10%;
+		}
+	}
+}
+
+.body {
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+
+	gap: 32px;
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		gap: 28px;
+	}
+	align-items: center;
+	@include adaptiveValue('padding-top', 60, 40);
+	// @include adaptiveValue('padding-bottom', 60, 40);
+	@include adaptiveValue('padding-left', 70, 30, 0, 1300, 768);
+	@include adaptiveValue('padding-right', 70, 30, 0, 1300, 768);
+	border-radius: 20px;
+
+	overflow: hidden;
+	@media (min-width: $mobile) {
+		max-height: 460px;
+	}
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #262626;
+		width: 100%;
+		height: 60%;
+		z-index: 3;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #262626;
+		width: 100%;
+		height: 41%;
+		z-index: -3;
+	}
+}
+.content {
+	position: relative;
+	z-index: 10;
+	flex: 0 1 38.3%;
+	display: flex;
+	flex-direction: column;
+	row-gap: toRem(20);
+	@media (min-width: $mobile) {
+		@include adaptiveValue('padding-bottom', 60, 40);
+	}
+}
+.images {
+	position: relative;
+
+	z-index: 3;
+	flex: 0 1 53%;
+	@media (min-width: $mobile) {
+		transform: translateX(5%);
+	}
+	display: flex;
+}
+.image {
+	img {
+		max-width: 100%;
+	}
+	&:nth-child(1) {
+		max-width: toRem(205.23);
+		@media (min-width: $mobile) {
+			transform: translate(0%, 32.5%);
+		}
+		@media (max-width: $mobile) {
+			transform: translate(0%, 16%);
+		}
+		img {
+			animation: levitate 4s ease-in-out infinite;
+		}
+	}
+	&:nth-child(2) {
+		max-width: toRem(192.28);
+		@media (min-width: $mobile) {
+			position: relative;
+			z-index: 5;
+			transform: translate(-9%, 47%);
+		}
+		@media (max-width: $mobile) {
+			transform: translate(0%, 31%);
+		}
+		img {
+			animation: levitate 4s ease-in-out infinite;
+		}
+	}
+	&:nth-child(3) {
+		max-width: toRem(202.53);
+		@media (min-width: $mobile) {
+			transform: translate(-15%, 17%);
+		}
+		@media (max-width: $mobile) {
+			transform: translate(0%, 3%);
+		}
+		img {
+			animation: levitateReverse 4s ease-in-out infinite;
+		}
+	}
+}
+.title {
+	font-family: 'Gardion', sans-serif;
+	@include adaptiveValue('font-size', 40, 32);
+}
+.green {
+	color: #c4ff00;
+}
+.sign {
+	font-family: 'Dela Gothic One', sans-serif;
+	color: #c4ff00;
+}
+.description {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.35;
+	margin-bottom: toRem(20);
+}
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	@media (max-width: $tablet) {
+		flex-direction: column;
+	}
+	gap: toRem(15);
+}

@@ -1,0 +1,16 @@
+@use 'base/reset' as *;
+@use 'base/variables' as *;
+@use 'fonts' as *;
+@use 'base/mixins' as *;
+@use 'base/functions' as *;
+@use 'components/wrapper' as *;
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #080e10;
+}
+body.lock {
+	overflow: hidden;
+}

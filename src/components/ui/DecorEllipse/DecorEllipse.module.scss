@@ -1,0 +1,19 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/functions' as *;
+
+.decor {
+	display: flex;
+	position: relative;
+	z-index: 5;
+	top: -10px;
+	left: 0px;
+	transform: translateX(toRem(-6));
+	@media (max-width: $mobile) {
+	}
+}
+.decorElement {
+	margin-right: toRem(-9);
+	@media (max-width: $mobile) {
+		margin-right: toRem(-7);
+	}
+}

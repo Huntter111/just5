@@ -1,0 +1,10 @@
+@use '../../../styles/base/mixins' as *;
+.benefits {
+	@include adaptiveValue('margin-top', 80, 30);
+	@include adaptiveValue('margin-bottom', 70, 30);
+}
+
+.container {
+	transform: rotate(2deg);
+	padding: 0 16px !important;
+}
