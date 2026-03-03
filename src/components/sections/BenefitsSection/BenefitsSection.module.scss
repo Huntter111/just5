@@ -1,4 +1,4 @@
-@use '../../../styles/base/mixins' as *;
+@use '@/styles/base/mixins' as *;
 .benefits {
 	@include adaptiveValue('margin-top', 80, 30);
 	@include adaptiveValue('margin-bottom', 70, 30);

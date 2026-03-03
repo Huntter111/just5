@@ -1,5 +1,5 @@
 import MainSlider from './MainSlider'
-import Button from '../../ui/Button/Button'
+import Button from '@/components/ui/Button/Button'
 import './MainSection.scss'
 const MainSection = () => {
 	return (

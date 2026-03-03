@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import Logo from '../../ui/Logo/Logo'
-import Button from '../../ui/Button/Button'
+import Logo from '@/components/ui/Logo/Logo'
+import Button from '@/components/ui/Button/Button'
 import styles from './Header.module.scss'
 import NavMenu from './NavMenu'
 import clsx from 'clsx'

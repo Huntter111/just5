@@ -1,7 +1,7 @@
-import Button from '../../ui/Button/Button'
-import imageLeft from '../../../assets/images/contact/image-left.png'
-import imageCenter from '../../../assets/images/contact/image-center.png'
-import imageRight from '../../../assets/images/contact/image-right.png'
+import Button from '@/components/ui/Button/Button'
+import imageLeft from '@/assets/images/contact/image-left.png'
+import imageCenter from '@/assets/images/contact/image-center.png'
+import imageRight from '@/assets/images/contact/image-right.png'
 import styles from './ContactSection.module.scss'
 import clsx from 'clsx'
 

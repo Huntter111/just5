@@ -4,10 +4,10 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 // Import types from Swiper
 // import type { Swiper as SwiperType } from 'swiper'
 
-import Button from '../../ui/Button/Button'
-import IconUnity from '../../ui/IconUnity/IconUnity'
-import DecorEllipse from '../../ui/DecorEllipse/DecorEllipse'
-import { sliderItems, type SliderAssetsItems } from '../../../constants/assets'
+import Button from '@/components/ui/Button/Button'
+import IconUnity from '@/components/ui/IconUnity/IconUnity'
+import DecorEllipse from '@/components/ui/DecorEllipse/DecorEllipse'
+import { sliderItems, type SliderAssetsItems } from '@/constants/assets'
 import './AssetsSlider.scss'
 
 // Import Swiper styles

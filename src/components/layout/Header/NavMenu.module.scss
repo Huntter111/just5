@@ -1,4 +1,4 @@
-@use '../../../styles/base/variables' as *;
+@use '@/styles/base/variables' as *;
 
 .menu {
 	@media (min-width: $mobile) {

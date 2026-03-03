@@ -1,6 +1,6 @@
 import './AboutSection.scss'
-import sprayGreenBlack from '../../../assets/images/about/spray-green-black.svg'
-import logoBlack from '../../../assets/images/about/logo.svg'
+import sprayGreenBlack from '@/assets/images/about/spray-green-black.svg'
+import logoBlack from '@/assets/images/about/logo.svg'
 
 type AboutSectionProps = {
 	anchorId?: string

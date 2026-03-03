@@ -1,6 +1,6 @@
-import iconMedal from '../../../assets/icons/trust/medal.svg'
-import iconPuzzle from '../../../assets/icons/trust/puzzle.svg'
-import iconSupport from '../../../assets/icons/trust/support.svg'
+import iconMedal from '@/assets/icons/trust/medal.svg'
+import iconPuzzle from '@/assets/icons/trust/puzzle.svg'
+import iconSupport from '@/assets/icons/trust/support.svg'
 import './TrustSection.scss'
 
 type TrustSectionProps = {

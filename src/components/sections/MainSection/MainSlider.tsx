@@ -10,12 +10,12 @@ import 'swiper/css/autoplay'
 import styles from './MainSlider.module.scss'
 import clsx from 'clsx'
 
-import mockupPhone1_1 from '../../../assets/images/main-slider/mockup-phone-1-1.png'
-import mockupPhone1_2 from '../../../assets/images/main-slider/mockup-phone-1-2.png'
-import mockupPhone2 from '../../../assets/images/main-slider/mockup-phone-2.png'
-import mockupMacbook3 from '../../../assets/images/main-slider/mockup-mackbook-for-three-slide.png'
-import mockupMacbook4 from '../../../assets/images/main-slider/mockup-mackbook-for-four-slide.png'
-import mockupMacbook5 from '../../../assets/images/main-slider/mockup-mackbook-for-five-slide.png'
+import mockupPhone1_1 from '@/assets/images/main-slider/mockup-phone-1-1.png'
+import mockupPhone1_2 from '@/assets/images/main-slider/mockup-phone-1-2.png'
+import mockupPhone2 from '@/assets/images/main-slider/mockup-phone-2.png'
+import mockupMacbook3 from '@/assets/images/main-slider/mockup-mackbook-for-three-slide.png'
+import mockupMacbook4 from '@/assets/images/main-slider/mockup-mackbook-for-four-slide.png'
+import mockupMacbook5 from '@/assets/images/main-slider/mockup-mackbook-for-five-slide.png'
 
 const MainSlider = () => {
 	return (

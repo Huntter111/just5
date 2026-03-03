@@ -1,6 +1,6 @@
-@use '../../../styles/base/functions' as *;
-@use '../../../styles/base/mixins' as *;
-@use '../../../styles/base/variables' as *;
+@use '@/styles/base/functions' as *;
+@use '@/styles/base/mixins' as *;
+@use '@/styles/base/variables' as *;
 
 .main-block {
 	padding-top: toRem(80);

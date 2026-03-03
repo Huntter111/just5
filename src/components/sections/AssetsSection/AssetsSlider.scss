@@ -1,6 +1,6 @@
-@use '../../../styles/base/mixins' as *;
-@use '../../../styles/base/functions' as *;
-@use '../../../styles/base/variables' as *;
+@use '@/styles/base/mixins' as *;
+@use '@/styles/base/functions' as *;
+@use '@/styles/base/variables' as *;
 $slider-ease: cubic-bezier(0.23, 1, 0.32, 1);
 $slider-speed: 0.8s; // Має дорівнювати speed={800} у Swiper
 

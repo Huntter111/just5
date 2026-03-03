@@ -1,6 +1,6 @@
-@use '../../../styles/base/mixins' as *;
-@use '../../../styles/base/variables' as *;
-@use '../../../styles/fonts/fonts' as *;
+@use '@/styles/base/mixins' as *;
+@use '@/styles/base/variables' as *;
+@use '@/styles/fonts/fonts' as *;
 
 .about {
 	@include adaptiveValue('padding-top', 70, 40);

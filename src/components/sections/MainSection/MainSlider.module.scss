@@ -1,6 +1,6 @@
-@use '../../../styles//base/variables' as *;
-@use '../../../styles/base/functions.scss' as *;
-@use '../../../styles/base/mixins.scss' as *;
+@use '@/styles//base/variables' as *;
+@use '@/styles/base/functions.scss' as *;
+@use '@/styles/base/mixins.scss' as *;
 
 .mainSliderWrapper {
 	min-width: 0; // для коректної роботи slider
@@ -9,8 +9,8 @@
 	position: relative;
 	// overflow: hidden;
 
-	mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-	-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+	mask-image: linear-gradient(to right, transparent, black 7%, black 93%, transparent);
+	-webkit-mask-image: linear-gradient(to right, transparent, black 7%, black 93%, transparent);
 }
 @keyframes levitateReverse {
 	0%,

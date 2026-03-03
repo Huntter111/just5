@@ -1,7 +1,8 @@
 import clsx from 'clsx'
-import { benefits } from '../../../constants/benefits'
-import Marquee from '../../ui/Marquee/Marquee'
 import styles from './BenefitsSection.module.scss'
+
+import { benefits } from '@/constants/benefits'
+import Marquee from '@/components/ui/Marquee/Marquee'
 
 const BenefitsSection = () => {
 	return (

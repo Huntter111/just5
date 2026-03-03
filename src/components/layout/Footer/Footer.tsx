@@ -1,4 +1,4 @@
-import { menuItems } from '../../../constants/navigation'
+import { menuItems } from '@/constants/navigation'
 import styles from './Footer.module.scss'
 const Footer = () => {
 	return (

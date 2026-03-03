@@ -1,8 +1,8 @@
-import assetImage1 from '../assets/images/assets/asset-1.png'
-import assetImage2 from '../assets/images/assets/asset-2.png'
-import assetImage3 from '../assets/images/assets/asset-3.png'
-import assetImage4 from '../assets/images/assets/asset-4.png'
-import assetImage5 from '../assets/images/assets/asset-5.png'
+import assetImage1 from '@/assets/images/assets/asset-1.png'
+import assetImage2 from '@/assets/images/assets/asset-2.png'
+import assetImage3 from '@/assets/images/assets/asset-3.png'
+import assetImage4 from '@/assets/images/assets/asset-4.png'
+import assetImage5 from '@/assets/images/assets/asset-5.png'
 
 export type SliderAssetsItems = {
 	decorEllipseColor: string
