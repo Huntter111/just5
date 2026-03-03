@@ -8,6 +8,7 @@ export type SliderAssetsItems = {
 	decorEllipseColor: string
 	label: {
 		color: string
+		bgColor: string
 		text: string
 	}
 	imageSrc: string
@@ -19,7 +20,8 @@ export const sliderItems: SliderAssetsItems[] = [
 	{
 		decorEllipseColor: '#FF710B',
 		label: {
-			color: '#FF710B',
+			color: '#fff',
+			bgColor: '#FF710B',
 			text: 'Game Core',
 		},
 		imageSrc: assetImage1,
@@ -29,7 +31,8 @@ export const sliderItems: SliderAssetsItems[] = [
 	{
 		decorEllipseColor: '#3C5CFF',
 		label: {
-			color: '#3C5CFF',
+			color: '#fff',
+			bgColor: '#3C5CFF',
 			text: '2D Packs',
 		},
 		imageSrc: assetImage2,
@@ -39,7 +42,8 @@ export const sliderItems: SliderAssetsItems[] = [
 	{
 		decorEllipseColor: '#BFF700',
 		label: {
-			color: '#BFF700',
+			color: '#262626',
+			bgColor: '#BFF700',
 			text: 'System',
 		},
 		imageSrc: assetImage3,
@@ -49,7 +53,8 @@ export const sliderItems: SliderAssetsItems[] = [
 	{
 		decorEllipseColor: '#ffffff',
 		label: {
-			color: '#ffffff',
+			color: '#262626',
+			bgColor: '#fff',
 			text: 'Tools',
 		},
 		imageSrc: assetImage4,
@@ -59,7 +64,8 @@ export const sliderItems: SliderAssetsItems[] = [
 	{
 		decorEllipseColor: '#FF710B',
 		label: {
-			color: '#FF710B',
+			color: '#fff',
+			bgColor: '#FF710B',
 			text: 'Game Core',
 		},
 		imageSrc: assetImage5,

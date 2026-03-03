@@ -4,11 +4,7 @@
 
 .assets {
 	@include adaptiveValue('padding-top', 100, 40);
-	// @include adaptiveValue('padding-bottom', 100, 90);]
-	@include adaptiveValue('margin-bottom', 100, 0, 0, 1300, 480);
-	@media (min-width: $mobile) {
-		padding-bottom: toRem(100);
-	}
+	@include adaptiveValue('margin-bottom', 80, 40, 0, 1300, 480);
 	&__slider {
 		min-width: 0;
 		// overflow: hidden;

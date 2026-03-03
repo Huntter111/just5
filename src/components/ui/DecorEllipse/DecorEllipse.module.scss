@@ -5,7 +5,7 @@
 	display: flex;
 	position: relative;
 	z-index: 5;
-	top: -10px;
+	top: 0;
 	left: 0px;
 	transform: translateX(toRem(-6));
 	@media (max-width: $mobile) {
