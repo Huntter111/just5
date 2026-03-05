@@ -9,8 +9,8 @@ $slider-speed: 0.8s; // Має дорівнювати speed={800} у Swiper
 	max-width: toRem(1300);
 	margin: 0 auto;
 	.assets-swiper {
-		mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
-		-webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+		mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+		-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 
 		padding-top: toRem(80);
 		@media (max-width: $mobile) {
