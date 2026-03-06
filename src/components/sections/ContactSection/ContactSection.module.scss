@@ -25,7 +25,7 @@
 	// position: relative;
 	@include adaptiveValue('padding-top', 120, 40);
 
-	@include adaptiveValue('margin-bottom', 170, 70);
+	@include adaptiveValue('padding-bottom', 170, 70);
 }
 .container {
 	position: relative;

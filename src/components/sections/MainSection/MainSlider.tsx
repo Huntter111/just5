@@ -28,7 +28,7 @@ const MainSlider = () => {
 				slidesPerView={1}
 				navigation={false}
 				loop={true}
-				speed={1000}
+				speed={2000}
 				autoplay={{ delay: 4000, disableOnInteraction: false }}
 				// onSwiper={(swiper) => console.log(swiper)}
 				// onSlideChange={() => console.log('slide change')}

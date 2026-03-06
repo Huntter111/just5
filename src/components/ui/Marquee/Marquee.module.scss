@@ -6,10 +6,14 @@ $gap: 50px;
 .wrapper {
 	position: relative;
 	overflow: hidden;
+	padding-top: toRem(12);
+	padding-bottom: toRem(12);
+	background-color: #262626;
+
+	@include adaptiveValue('min-height', 67, 51);
 
 	mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 	-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-
 	isolation: isolate;
 }
 
@@ -17,9 +21,7 @@ $gap: 50px;
 	font-family: 'Gardion';
 	line-height: 1.35;
 	@include adaptiveValue('font-size', 32, 20);
-	padding-top: toRem(12);
-	padding-bottom: toRem(12);
-	background-color: #262626;
+
 	display: flex;
 	width: max-content;
 

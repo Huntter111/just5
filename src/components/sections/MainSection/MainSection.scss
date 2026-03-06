@@ -4,13 +4,14 @@
 
 .main-block {
 	padding-top: toRem(80);
-	margin-bottom: toRem(40);
+	// margin-bottom: toRem(40);
+	padding-bottom: toRem(40);
 	@media (max-width: $tablet) {
 		padding-top: toRem(40);
 	}
 	@media (max-width: $mobileSmall) {
 		padding-top: toRem(20);
-		margin-bottom: toRem(20);
+		padding-bottom: toRem(20);
 	}
 	&__container {
 	}
@@ -53,9 +54,10 @@
 		@include adaptiveValue('font-size', 20, 18);
 		font-weight: 500;
 		line-height: 1.35;
+		max-width: toRem(500);
 	}
 	&__buttons {
-		margin-top: 0.5rem;
+		padding-top: 0.5rem;
 		font-size: 18px;
 		display: flex;
 		@media (max-width: $mobileSmall) {

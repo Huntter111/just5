@@ -10,7 +10,7 @@ const BenefitsSection = () => {
 			<div className={clsx('benefits__container', styles.container)}>
 				<Marquee
 					items={benefits}
-					duration={15}
+					duration={20}
 				/>
 			</div>
 		</section>

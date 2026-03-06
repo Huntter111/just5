@@ -4,7 +4,7 @@
 
 .trust {
 	padding-top: toRem(70);
-	margin-bottom: toRem(60);
+	padding-bottom: toRem(60);
 	position: relative;
 
 	@media (min-width: $mobile) {
@@ -12,9 +12,9 @@
 		&::after {
 			content: '';
 			position: absolute;
-			top: 63%;
+			top: 57%;
 			@media (max-width: $tablet) {
-				top: 67%;
+				top: 60%;
 			}
 			left: 0;
 			right: 0;

@@ -28,7 +28,7 @@ const AssetsSlider = () => {
 					1297: { slidesPerView: 3 },
 				}}
 				centeredSlides={true}
-				speed={800}
+				speed={1200}
 				// watchSlidesProgress={true}
 				grabCursor={true}
 				autoplay={{
