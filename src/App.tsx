@@ -6,8 +6,17 @@ import AboutSection from './components/sections/AboutSection/AboutSection'
 import TrustSection from './components/sections/TrustSection/TrustSection'
 import AssetsSection from './components/sections/AssetsSection/AssetsSection'
 import ContactSection from './components/sections/ContactSection/ContactSection'
+import { useEffect } from 'react'
 
 function App() {
+	// fix for scroll
+	useEffect(() => {
+		if ('scrollRestoration' in history) {
+			history.scrollRestoration = 'manual'
+		}
+		window.scrollTo(0, 0)
+	}, [])
+
 	return (
 		<div className="wrapper">
 			<Header />
