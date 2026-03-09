@@ -2,6 +2,7 @@
 .benefits {
 	@include adaptiveValue('padding-top', 80, 30);
 	@include adaptiveValue('padding-bottom', 70, 30);
+	overflow-anchor: none;
 }
 
 .container {

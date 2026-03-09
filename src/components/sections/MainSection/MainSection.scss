@@ -6,6 +6,7 @@
 	padding-top: toRem(80);
 	// margin-bottom: toRem(40);
 	padding-bottom: toRem(40);
+	overflow-anchor: none;
 	@media (max-width: $tablet) {
 		padding-top: toRem(40);
 	}

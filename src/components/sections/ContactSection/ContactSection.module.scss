@@ -26,6 +26,7 @@
 	@include adaptiveValue('padding-top', 120, 40);
 
 	@include adaptiveValue('padding-bottom', 170, 70);
+	overflow-anchor: none;
 }
 .container {
 	position: relative;

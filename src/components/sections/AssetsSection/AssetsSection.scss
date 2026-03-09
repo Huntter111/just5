@@ -5,6 +5,7 @@
 .assets {
 	@include adaptiveValue('padding-top', 100, 40);
 	@include adaptiveValue('padding-bottom', 80, 40, 0, 1300, 480);
+	overflow-anchor: none;
 	&__slider {
 		min-width: 0;
 		// overflow: hidden;

@@ -1,9 +1,10 @@
 .wrapper {
 	width: 100%;
-	max-width: 574px;
+	height: 572px;
 	aspect-ratio: 574 / 572;
 	position: relative;
 	margin: 0 auto;
+	overflow-anchor: none;
 }
 
 .reveal {

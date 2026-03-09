@@ -6,7 +6,7 @@
 	padding-top: toRem(70);
 	padding-bottom: toRem(60);
 	position: relative;
-
+	overflow-anchor: none;
 	@media (min-width: $mobile) {
 		// Horizontal green line
 		&::after {
